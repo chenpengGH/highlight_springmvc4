@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Random;
 
 /**
  * Description:
@@ -30,7 +29,7 @@ public class DemoSseController {
         System.out.println(currentTime);
         String sessionId = req.getSession(false).getId();
 
-        return "";
-//        return "data:("+ id +")当前系统时间 " + currentTime + "sessionId "+ sessionId + "\n\n";
+//        return "";
+        return "data:("+ id +")当前系统时间 " + currentTime + "sessionId "+ sessionId + "\n\n";
     }
 }

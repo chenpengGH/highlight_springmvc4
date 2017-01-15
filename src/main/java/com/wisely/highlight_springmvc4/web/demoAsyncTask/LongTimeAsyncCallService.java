@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 public class LongTimeAsyncCallService {
 
     private final int CorePoolSize = 4;
-    private final int NeedSeconds = 300;
+    private final int NeedSeconds = 1;
     private Random random = new Random();
     private ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(CorePoolSize);
     public void makeRemoteCallAndUnknownWhenFinish(final LongTermTaskCallback callback) {

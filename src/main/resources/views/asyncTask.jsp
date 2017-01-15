@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
+<% String contextPath = request.getContextPath(); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +12,7 @@
 <script type="text/javascript" charset="utf-8">
     pot();
     function pot() {
-        $.get('http://localhost/highlight_springmvc4/asyncTask', function (data) {
+        $.get('<%=contextPath %>/asyncTask', function (data) {
             console.log(data);
             $("#content").html(data);
             pot();
